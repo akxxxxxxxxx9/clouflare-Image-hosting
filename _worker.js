@@ -1,13 +1,11 @@
 // Website you intended to retrieve for users.
 const upstream = "raw.githubusercontent.com";
 
-// Custom pathname for the upstream website.
-// (1) 填写代理的路径，格式为 /<用户>/<仓库名>/<分支>
-const upstream_path = "/hansvlss/PicGo-img/master";
+// 从环境变量中获取代理路径
+const upstream_path = ENV.UPSTREAM_PATH;
 
-// github personal access token.
-// (2) 填写github令牌
-const github_token = "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";
+// 从环境变量中获取 GitHub Personal Access Token
+const github_token = ENV.GITHUB_TOKEN;
 
 // Website you intended to retrieve for users using mobile devices.
 const upstream_mobile = upstream;
