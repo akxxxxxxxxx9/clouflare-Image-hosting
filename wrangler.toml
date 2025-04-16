@@ -2,11 +2,12 @@ name = "cloudflare-image-hosting"
 compatibility_date = "2025-04-16"
 
 [build]
-command = "" # 如果不需要构建步骤，可以留空
+command = "" # 如果没有构建步骤，可以留空
 upload_format = "service-worker" # 确保以 service-worker 格式上传
+pages_build_output_dir = "./" # 指定构建输出目录为当前目录
 
 [site]
-bucket = "./" # 指定当前目录为静态资源目录
+bucket = "./" # 指定静态资源目录为当前目录
 entry-point = "./" # 指定入口文件所在目录
 
 [worker]
