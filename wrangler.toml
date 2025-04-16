@@ -1,6 +1,13 @@
 name = "cloudflare-image-hosting"
 compatibility_date = "2025-04-16"
 
+[build]
+command = "" # 如果不需要构建步骤，可以留空
+upload_format = "service-worker" # 确保以 service-worker 格式上传
+
 [site]
-bucket = "./"
-entry-point = "./"
+bucket = "./" # 指定当前目录为静态资源目录
+entry-point = "./" # 指定入口文件所在目录
+
+[worker]
+main = "./_worker.js" # 指定 _worker.js 文件为主模块
